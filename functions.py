@@ -1,13 +1,15 @@
 '''
 Author: Quentin Bordelon
-2022-12-22
+Start Date: 2022-12-22
+V1: 2022-12-23
 '''
-import pydictionary, sys
+
+import pydictionary, os, openai
 
 class Vocab:
     
-    sys.stdin = open("input.txt", 'r').readlines()
-    sys.stdout = open("output.txt", 'w')
+    with open("input.txt", 'r') as file:
+        words = file.read().strip().split('\n')
 
     def define(word):
         findword = pydictionary.Dictionary(word)
@@ -15,11 +17,22 @@ class Vocab:
         return meaning[0]
 
     def sentence(word):
-        return
+        response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt= f"write a sentence with the word {word}",
+        temperature=0.8,
+        max_tokens=60,
+        top_p=1.0,
+        frequency_penalty=0.5,
+        presence_penalty=0.0
+        )
+        return response.get("choices")[0].get("text").split('. ')[0][2:]
     
     def format():
-        for count, i in enumerate(sys.stdin):
+        fout = open("output.txt", 'w')
+        for count, i in enumerate(Vocab.words):
             if count == 0:
-                print(f'\t\t\t\t\t\tVocabulary')
+                fout.write(f'\t\t\t\t\t\tVocabulary\n')
             meaning = Vocab.define(i)
-            print(f"\t{count+1}. {i[:-1]}: {meaning}")
+            Sentence = Vocab.sentence(i)
+            fout.write(f"\t{count+1}. {i}: {meaning} {Sentence}\n")

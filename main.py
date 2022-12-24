@@ -1,4 +1,4 @@
-from functions import Vocab
+from functions import Vocab, openai
 
-if __name__ == "__main__":
-    vocab = Vocab.format()
+openai.api_key = input("Please enter your openAI API key: ")
+vocab = Vocab.format()
