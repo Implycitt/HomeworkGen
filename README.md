@@ -55,10 +55,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
+This script uses openAI to create sentences from input words as well as a definition. This is to auto complete a certain english assignment that takes too much valuable time to do manually. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -68,7 +67,6 @@ Built entirely with python
 * ![python][python]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
