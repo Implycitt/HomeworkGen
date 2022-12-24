@@ -121,4 +121,4 @@ Distributed under the GNU General Public License. See `LICENSE.md` for more info
 [license-shield]: https://img.shields.io/github/license/Implycitt/Homeworkgen.svg?style=for-the-badge
 [license-url]: https://github.com/Implycitt/HomeworkGen/blob/master/LICENSE.md
 [product-screenshot]: images/screenshot.png
-[python]: https://img.shields.io/badge/python-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[python]: https://img.shields.io/badge/python-0769AD?style=for-the-badge&logo=python&logoColor=white
