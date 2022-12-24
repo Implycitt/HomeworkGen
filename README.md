@@ -82,7 +82,7 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Get a free API Key at [OpenAI](https://beta.openai.com/account/api-keys)
 2. Clone the repo
    ```sh
-   git clone https://github.com/Implycitt/Homewor.git
+   git clone https://github.com/Implycitt/Homework.git
    ```
 3. Enter one word per line in `input.txt`
    ```sh
